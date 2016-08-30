@@ -1,1 +1,1 @@
-worker: tweet.py
+worker: python tweet.py tautonyms.txt
