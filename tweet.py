@@ -4,12 +4,7 @@
 # a super quick bot with thanks to http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/
 
 import tweepy, time, sys
-#from secrets import * #import twitter creds
-
-CONSUMER_KEY = "rnySqpVrGtGw8BmsEAMEORdsQ"
-CONSUMER_SECRET = "bpH2V6VM6L8FymSyuaIoYHJfW0jOIRQwJAmh4j5YA9VwNk0xZw"
-ACCESS_TOKEN = "767719595079786496-KA0uSGDFznMLTwyKKg4LTYqz5Wb8vHq"
-ACCESS_TOKEN_SECRET = "vZY98SzA8y4lrBZ5zcXMdIWhd6SGM9jWQifkCX1W3D1c8"
+from secrets import * #import twitter creds
 
 argfile = str(sys.argv[1])
 
