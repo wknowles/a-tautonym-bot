@@ -26,7 +26,7 @@ try:
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the tweeted line.
                 tweetfile.writelines(buff)
-            time.sleep(21,600) #6 Hours
+            time.sleep(21600) #6 Hours
         else:
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the line that has more than 140 characters.
