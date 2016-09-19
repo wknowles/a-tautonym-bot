@@ -21,12 +21,12 @@ try:
     for line in buff[:]:
         line = line.strip(r'\n') #Strips any empty line.
         if len(line)<=140 and len(line)>0:
-            # print ("Tweeting...")
+            print ("Tweeting...", line)
             api.update_status(line)
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the tweeted line.
                 tweetfile.writelines(buff)
-            time.sleep(3600)
+            time.sleep(21,600) #6 Hours
         else:
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the line that has more than 140 characters.
