@@ -26,6 +26,6 @@ tweet = "%s (%s, %i)" % (binomial, authority, date)
 # check length and then tweet
 if len(tweet)<=140 and len(tweet)>0:
     print "Tweeting ====> ", tweet
-    #api.update_status(tweet)
+    api.update_status(tweet)
 else:
     print "Skipped tweet - too long!"
