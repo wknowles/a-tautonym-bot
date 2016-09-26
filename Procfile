@@ -1,1 +1,1 @@
-worker: python tweet.py
+worker: python tautogen.py
