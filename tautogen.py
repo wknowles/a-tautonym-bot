@@ -3,7 +3,7 @@
 
 # taxonomy taken from list of Classical Latin proper names: https://github.com/cltk/latin_proper_names_cltk
 
-import tweepy, random
+import tweepy, os, random
 
 # import auth from heroku
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
