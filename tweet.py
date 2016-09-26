@@ -1,13 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# runs on heroku - twitter auth is done through config vars added to heroku
+
 import tweepy, time, os
 
+#import twitter creds from secrets.py - delete when running on heroku
+from secrets import *
+
 # import auth from heroku
-CONSUMER_KEY = os.environ['CONSUMER_KEY']
-CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
-ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
-ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
+# CONSUMER_KEY = os.environ['CONSUMER_KEY']
+# CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
+# ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+# ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 # twitter auth
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -26,7 +31,7 @@ try:
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the tweeted line.
                 tweetfile.writelines(buff)
-            time.sleep(21600) #6 Hours
+            time.sleep(10) #6 Hours
         else:
             with open ('tautonyms.txt', 'w') as tweetfile:
                 buff.remove(line) #Removes the line that has more than 140 characters.
