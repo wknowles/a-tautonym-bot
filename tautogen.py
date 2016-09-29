@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import tweepy, os, random
+import tweepy
+import os
+import random
 from datetime import date
 
 
@@ -24,7 +26,7 @@ authority = random.choice(open('corpus/authority.txt').readlines()).rstrip('\n')
 tweet = "%s (%s, %i)" % (binomial, authority, date)
 
 # check length and then tweet
-if len(tweet)<=140 and len(tweet)>0:
+if len(tweet) <= 140 and len(tweet) > 0:
     api.update_status(tweet)
 else:
     print "Skipped tweet - too long!"
